@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footcap - Find your footwear</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Custom CSS Link -->
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- Google Font Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Preload Banner -->
+  <link rel="preload" href="./assets/images/hero-banner.png" as="image">
+
+</head>
+
+<body id="top">
+
+  <!-- Header Section -->
+  <header class="header" data-header>
+    <div class="container">
+      <div class="overlay" data-overlay></div>
+
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <img src="./Assets/logo.png" width="50" height="50" alt="June's logo">
+      </a>
+
+      <!-- Navigation Buttons -->
+      <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+        <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <a href="#" class="logo">
+          <img src="./Assets/logo.png" width="50" height="50" alt="June's logo">
+        </a>
+
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="index.html" class="navbar-link">Home</a></li>
+          <li class="navbar-item"><a href="products.html" class="navbar-link">Products</a></li>
+          <li class="navbar-item"><a href="shop.html" class="navbar-link">Shop</a></li>
+          <li class="navbar-item"><a href="cart.html" class="navbar-link">Checkout</a></li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <ul class="nav-action-list">
+          <li><button class="nav-action-btn"><ion-icon name="search-outline" aria-hidden="true"></ion-icon><span class="nav-action-text">Search</span></button></li>
+          <li><a href="#" class="nav-action-btn"><ion-icon name="person-outline" aria-hidden="true"></ion-icon><span class="nav-action-text">Login / Register</span></a></li>
+          <li><button class="nav-action-btn"><ion-icon name="heart-outline" aria-hidden="true"></ion-icon><span class="nav-action-text">Wishlist</span><data class="nav-action-badge" value="5" aria-hidden="true">5</data></button></li>
+          <li><button class="nav-action-btn"><ion-icon name="bag-outline" aria-hidden="true"></ion-icon><data class="nav-action-text" value="318.00">Basket: <strong>$318.00</strong></data><data class="nav-action-badge" value="4" aria-hidden="true">4</data></button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Cart Section -->
+  <section class="section cart">
+    <div class="container">
+      <h2 class="h2 section-title">Cart Surmary</h2>
+
+      <div class="cart-list">
+    
+        <div class="cart-item">
+          <img src="./Assets/Product_12.jpeg" alt="Product Name" class="cart-item-image">
+          <div class="cart-item-details">
+            <h3 class="h3 cart-item-title">Product Name 1</h3>
+            <p class="cart-item-price">$99.99</p>
+            <div class="cart-item-actions">
+              <button class="cart-item-action-btn">Remove</button>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+
+    </div>
+
+    <div class="cart-summary">
+      <p class="cart-total">Total: $99.99</p>
+      <button class="btn btn-primary">Proceed to Checkout</button>
+    </div>
+
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-top section">
+      <div class="container">
+       
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="./Assets/logo.png" width="50" height="50" alt="June's logo">
+          </a>
+          <ul class="social-list">
+            <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-pinterest"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          </ul>
+        </div>
+       
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">&copy; 2024 <a href="#" class="copyright-link">June's Closet</a>. All Rights Reserved</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Go to Top Button -->
+  <a href="#top" class="go-top-btn" data-go-top>
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </a>
+
+  <!-- Custom JS Link -->
+  <script src="./main.js"></script>
+
+  <!-- Ionicon Link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./main.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const cartItems = document.querySelectorAll('.cart-item');
+
+      cartItems.forEach(function (item) {
+        const removeButton = item.querySelector('.cart-item-action-btn');
+        removeButton.addEventListener('click', function () {
+          item.remove(); // Remove the clicked item from the cart
+          updateTotalPrice();
+        });
+      });
+
+      // Initial update of the total price
+      updateTotalPrice();
+    });
+
+    function updateTotalPrice() {
+      const cartItems = document.querySelectorAll('.cart-item');
+      let totalPrice = 0;
+
+      cartItems.forEach(function (item) {
+        const priceText = item.querySelector('.cart-item-price').textContent;
+        const price = parseFloat(priceText.replace('$', '')); // Extract the numeric value from the price text
+        totalPrice += price;
+      });
+
+      const totalPriceElement = document.querySelector('.cart-total');
+      totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
+
+      updateBasketIcon(cartItems.length);
+    }
+
+    function updateBasketIcon(quantity) {
+      const basketIcon = document.querySelector('.nav-action-btn[data-basket-icon]');
+      basketIcon.setAttribute('data-basket-icon', quantity);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const cartItems = document.querySelectorAll('.cart-item');
+      const cartItemImage = document.querySelector('.cart-item-image');
+
+      cartItems.forEach(cartItem => {
+        cartItem.addEventListener('click', function () {
+          const productImageURL = cartItem.dataset.productImage;
+          updateCartItemImage(productImageURL);
+        });
+      });
+
+      function updateCartItemImage(imageURL) {
+        cartItemImage.src = imageURL;
+        cartItemImage.alt = 'Selected Product';
+      }
+    });
+  </script>
+
+</body>
+
+</html>
